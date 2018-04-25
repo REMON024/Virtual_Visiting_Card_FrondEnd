@@ -1,0 +1,17 @@
+<section id="card-request">
+  <div class="col-md-10 col-md-offset-1 ">
+    <!-- {{ requests | json }} -->
+  <h3>Card View Requets</h3>
+  <hr>
+    <table class="table table-hover  ">
+      <tr *ngFor="let request of requests">
+        <td>{{ request.Field1}}</td>
+        <td>{{ request.Name}}</td>
+        <td>
+          <button class="btn btn-success btn-sm" (click)="onAccept(request)"> Accept </button>
+          <button class="btn btn-danger btn-sm"  (click)="onDecline(request)"> Decline </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>

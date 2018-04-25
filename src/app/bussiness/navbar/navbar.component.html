@@ -1,0 +1,47 @@
+<nav id="navbar123" class="navbar navbar-default">
+  <div class="container">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand"><i class="fa fa-id-card fa-lg" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <!-- [class.hide]="!active" <ul class="nav navbar-nav">
+          <li routerLinkActive="active"><a routerLink="/home">Home </a></li>
+        </ul> -->
+
+        <ul class="nav navbar-nav">
+          <li routerLinkActive="active"><a routerLink="/bussiness/wallet">Wallet</a></li>
+          <li routerLinkActive="active"><a routerLink="/bussiness/card-request">Card View Request</a></li>
+          <li routerLinkActive="active"><a *ngIf="isCard" routerLink="/bussiness/card"> My Card</a></li>
+          <li routerLinkActive="active"><a *ngIf="!isCard" routerLink="/bussiness/apply-card"> Apply Card</a></li>
+        </ul>
+
+        <div class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="searchKeyword" placeholder="Search Card">
+          </div>
+          <button (click)="gotoFindCard()" class="btn btn-default">Search</button>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+             aria-expanded="false"> <i class="fa fa-user-circle"></i> {{ userName }} <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a routerLink="/bussiness/changePassword"><i class="fa fa-pencil"></i> Change Password</a></li>
+              <li><a routerLink="/home"><i class="fa fa-user-times"></i> Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

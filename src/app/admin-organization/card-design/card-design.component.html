@@ -1,0 +1,153 @@
+<nav class="navbar navbar-inverse" id="admin-navbar">
+  <div class="container">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li routerLinkActive="active"><a routerLink="/admin/newRequest">New Request </a></li>
+          <li routerLinkActive="active"><a routerLink="/admin/userList">Users</a></li>
+          <li routerLinkActive="active"><a routerLink="/admin/cardDesing">Card Design</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Admin <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a routerLink="/admin/changeAdminPassword" class="dropdown-item"> <i class="fa fa-pencil">&nbsp; Change Password</i> </a></li>
+              <li><a href="#" class="dropdown-item"> <i class="fa fa-info"> &nbsp; info</i> </a></li>
+            </ul>
+          </li>
+          <li> <a routerLink="/" class="nav-link"> <i class="fa fa-user-times"></i> Logout</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+</nav>
+
+<!-- admin HEADER -->
+<header class="bg-primary text-white" id="admin-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1><i class="fa fa-address-card"></i> Card Design</h1>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- CARD DESIGN SELECT -->
+<section id="card-design-section">
+  <div class="container">
+    <div class="well">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+          <div class="row">
+            <div class="form-group ">
+              <label for="organizationName">Organization Name:</label>
+              <input type="text" class="form-control" [(ngModel)]="organizationName" name="organizationName">
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="input1">Input 1:</label>
+                <input type="text" class="form-control" [(ngModel)]="input1" name="input1">
+              </div>
+
+              <div class="form-group">
+                <label for="input2">Input 2:</label>
+                <input type="text" class="form-control" [(ngModel)]="input2" name="input2">
+              </div>
+              <div class="form-group">
+                <label for="input3">Input 3:</label>
+                <input type="text" class="form-control" [(ngModel)]="input3" name="input3">
+              </div>
+              <div class="form-group">
+                <label for="input4">Input 4:</label>
+                <input type="text" class="form-control" [(ngModel)]="input4" name="input4">
+              </div>
+              <div class="form-group">
+                <label for="input5">Input 5:</label>
+                <input type="text" class="form-control" [(ngModel)]="input5" name="input5">
+              </div>
+              <div class="form-group">
+                <label for="input6">Input 6:</label>
+                <input type="text" class="form-control" [(ngModel)]="input6" name="input6">
+              </div>
+              <div class="form-group">
+                <label for="input7">Input 7:</label>
+                <input type="text" class="form-control" [(ngModel)]="input7" name="input7">
+              </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+              <div class="form-group">
+                <label for="input1">Input 1 Placeholder:</label>
+                <input type="text" class="form-control" [(ngModel)]="input1ph" name="input1ph">
+              </div>
+              <div class="form-group">
+                <label for="input2ph">Input 2 Placeholder:</label>
+                <input type="text" class="form-control" [(ngModel)]="input2ph" name="input2ph">
+              </div>
+              <div class="form-group">
+                <label for="input3ph">Input 3 Placeholder:</label>
+                <input type="text" class="form-control" [(ngModel)]="input3ph" name="input3ph">
+              </div>
+              <div class="form-group">
+                <label for="input4ph">Input 4 Placeholder:</label>
+                <input type="text" class="form-control" [(ngModel)]="input4ph" name="input4ph">
+              </div>
+              <div class="form-group">
+                <label for="input5ph">Input 5 Placeholder:</label>
+                <input type="text" class="form-control" [(ngModel)]="input5ph" name="input5ph">
+              </div>
+              <div class="form-group">
+                <label for="input6ph">Input 6 Placeholder:</label>
+                <input type="text" class="form-control" [(ngModel)]="input6ph" name="input6ph">
+              </div>
+              <div class="form-group">
+                <label for="input7ph">Input 7 Placeholder:</label>
+                <input type="text" class="form-control" [(ngModel)]="input7ph" name="input7ph">
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              <button class="btn btn-primary btn-block" (click)="DesignSubmit()">Submit</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- admin FOOTER -->
+<footer id="admin-footer" class="navbar-inverse text-white footer navbar-fixed-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="lead text-center">Copyright &copy; 2017 </p>
+      </div>
+    </div>
+  </div>
+</footer>

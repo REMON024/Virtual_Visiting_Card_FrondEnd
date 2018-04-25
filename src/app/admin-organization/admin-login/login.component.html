@@ -1,0 +1,31 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" (click)="close()">&times;</button>
+      <h4 class="modal-title">{{title || 'Prompt'}}</h4>
+    </div>
+    <form #form=ngForm (ngSubmit)="login(form.value)">
+    <div class="modal-body">
+      <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" ngModel #email=ngModel name="email" required>
+        <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+          Email is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" ngModel #password=ngModel name="password" required>
+        <div class="alert alert-danger" *ngIf="password.touched && !password.valid" >
+          Password is required.
+        </div>
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-primary btn-block" >Login</button>
+    </div>
+  </form>
+  </div>
+</div>

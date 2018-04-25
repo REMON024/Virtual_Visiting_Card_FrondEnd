@@ -1,0 +1,61 @@
+<section id="apply-card">
+  <div class="container">
+    <div class="well">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+          <fieldset>
+            <legend> Give Detail</legend>
+            <!-- {{ organizations | json }} -->
+            <div class="form-group">
+              <label>Organization Name:</label>
+              <select class="form-control" [(ngModel)]="selectedOrg">
+                        <option>Select Organization</option>
+                        <option *ngFor="let org of organizations" [ngValue]="org">
+                          {{ org.Name}}
+                        </option> 
+                </select>
+            </div>
+
+            <div class="form-group" [hidden]="selectedOrg?.Field1 == null">
+              <label>{{ selectedOrg?.Field1 }}</label>
+              <input type="text" class="form-control" [(ngModel)]="Field1" [placeholder]="selectedOrg?.Field1Placeholder">
+            </div>
+            <div class="form-group"  [hidden]="selectedOrg?.Field2 == null">
+              <label>{{ selectedOrg?.Field2 }}</label>
+              <input type="text" class="form-control" [(ngModel)]="Field2" [placeholder]="selectedOrg?.Field2Placeholder">
+            </div>
+            <div class="form-group" [hidden]="selectedOrg?.Field3 == null">
+              <label>{{ selectedOrg?.Field3 }}</label>
+              <input type="text" class="form-control" [(ngModel)]="Field3" [placeholder]="selectedOrg?.Field3Placeholder">
+            </div>
+            <div class="form-group" [hidden]="selectedOrg?.Field4 == null">
+              <label>{{ selectedOrg?.Field4 }}</label>
+              <input type="text" class="form-control" [(ngModel)]="Field4" [placeholder]="selectedOrg?.Field4Placeholder">
+            </div>
+            <div class="form-group" [hidden]="selectedOrg?.Field5 == null">
+              <label>{{ selectedOrg?.Field5 }}</label>
+              <input type="text" class="form-control" [(ngModel)]="Field5" [placeholder]="selectedOrg?.Field5Placeholder">
+            </div>
+            <div class="form-group" *ngIf="selectedOrg?.Field6 != null">
+              <label>{{ selectedOrg?.Field6 }}</label>
+              <input type="text" class="form-control" [(ngModel)]="Field6" [placeholder]="selectedOrg?.Field6Placeholder">
+            </div>
+            <div class="form-group" *ngIf="selectedOrg?.Field7 != null">
+              <label>{{ selectedOrg?.Field7 }}</label>
+              <input type="text" class="form-control" [(ngModel)]="Field7" [placeholder]="selectedOrg?.Field7Placeholder">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary btn-block" (click)="onCardSubmit()">Submit</button>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- <label>Name:</label>
+<select [(ngModel)]="selectedGame" required>
+   <option *ngFor="let game of games" [ngValue]="game" > {{game.name}} </option>
+</select>
+<label>Type:</label>
+<input type="type"name="type" [(ngModel)]="selectedGame.type"> -->
